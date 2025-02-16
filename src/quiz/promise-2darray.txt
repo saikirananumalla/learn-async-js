@@ -1,4 +1,9 @@
 - Extract the code in the setTimeout function and replace the setTimeout function  with the extracted code. Then run the main script. 
 - Is there a difference in the flow of execution from when the code was in the setTimeout function?
-- Is the flow of execution in both these examples different from the flow of execution with the examples using the fetch() API, which also returns a promise? 
+    Yes
+- Is the flow of execution in both these examples different from the flow of execution with the examples using the fetch() API, which also returns a promise?
+    No, setTimeout and fetch differ but without set timeout its the same with previous fetch examples
 - If yes, explain the code execution difference. Add your explanation to this file.
+    If we dont use set timeout, then all the code in sum method is executed in single flow and when we use timeout, the piece of code is put into timers queue
+    and its priority order of execution decreases. In fetch example, its an asynchronous task and node.js runs it on a separate thread to get results hence
+    the order.
